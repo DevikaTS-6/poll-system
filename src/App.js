@@ -1,16 +1,16 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import Student from "./pages/Student";
 import Teacher from "./pages/Teacher";
 
-function App() {
+export default function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/" element={<Student />} />
-        <Route path="/teacher" element={<Teacher />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/Student" element={<Student />} />
+        <Route path="/Teacher" element={<Teacher />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
-
-export default App;
